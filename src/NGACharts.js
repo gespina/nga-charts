@@ -1,21 +1,70 @@
 import React from "react";
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from "recharts";
+import {
+  Bar,
+  CartesianGrid,
+  ComposedChart,
+  Area,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend
+} from "recharts";
+import ReactTable from "react-table";
 import { Card, CardText, CardBody, CardHeader } from "reactstrap";
 import { compose, prop, map } from "ramda";
 import moment from "moment";
+
+const columns = [
+  {
+    Header: "Time",
+    accessor: "time"
+  },
+  {
+    Header: "V(Ei, m)",
+    accessor: "vOfT"
+  },
+  {
+    Header: "IG Profile",
+    accessor: "igProfile"
+  },
+  {
+    Header: "Resultant VoC",
+    accessor: "voc"
+  }
+];
 
 const ChartsList = ({ id, title, desc, result }) => (
   <Card>
     <CardHeader>{title}</CardHeader>
     <CardBody>
-      <LineChart width={500} height={300} data={result}>
+      <CardText>{desc}</CardText>
+    </CardBody>
+    <CardBody>
+      <div>
+        <ReactTable
+          data={result}
+          columns={columns}
+          minRows={4}
+          showPagination={false}
+          className="-striped -highlight"
+        />
+      </div>
+    </CardBody>
+    <CardBody>
+      <ComposedChart width={640} height={300} data={result}>
         <XAxis
           dataKey="time"
           name="Time"
-          tickFormatter={isoTime => moment(isoTime).format("HH:mm:ss")}
+          tickFormatter={isoTime =>
+            moment(isoTime)
+              .utc()
+              .format("HH:mm:ss")
+          }
           type="category"
         />
         <YAxis />
+        <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Legend />
         <Line
@@ -32,16 +81,21 @@ const ChartsList = ({ id, title, desc, result }) => (
           stroke="#6686b7"
           strokeDasharray="5 2"
         />
-        <Line
+        <Area
           type="monotone"
           dataKey="voc"
           name="Resultant VoC"
           stroke="#8884d8"
         />
-      </LineChart>
-      <CardBody>
-        <CardText>{desc}</CardText>
-      </CardBody>
+        <Bar
+          type="monotone"
+          dataKey="voc"
+          barSize={10}
+          name="Resultant VoC"
+          fill="#413ea0"
+          legendType="none"
+        />
+      </ComposedChart>
     </CardBody>
   </Card>
 );

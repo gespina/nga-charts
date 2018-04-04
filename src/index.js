@@ -3,13 +3,14 @@ import { render } from "react-dom";
 import NGACharts from "./NGACharts";
 import NGANavbar from "./NGANavbar";
 import results from "./data/results.json";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-table/react-table.css";
 
 const App = () => (
-    <div>
-        <NGANavbar />
-        <NGACharts results={results}/>
-    </div>
+  <div>
+    <NGANavbar />
+    <NGACharts results={results} />
+  </div>
 );
 
 render(<App />, document.getElementById("root"));
