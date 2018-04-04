@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend
-} from "recharts";
-import {Container, Row, Col} from "reactstrap";
-import {compose, prop, map} from "ramda";
-import moment from 'moment';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from "recharts";
+import { Container, Row, Col } from "reactstrap";
+import { compose, prop, map } from "ramda";
+import moment from "moment";
 
-const ChartsContainer = ({id, desc, result}) => (
+const ChartsContainer = ({ id, desc, result }) => (
   <Container key={id}>
     <Row>
       <Col>
@@ -19,25 +12,32 @@ const ChartsContainer = ({id, desc, result}) => (
           <XAxis
             dataKey="time"
             name="Time"
-            tickFormatter=
-            {(isoTime) => moment(isoTime).format('HH:mm')}
-            type="category"/>
-          <YAxis/>
-          <Tooltip/>
-          <Legend/>
+            tickFormatter={isoTime => moment(isoTime).format("HH:mm")}
+            type="category"
+          />
+          <YAxis />
+          <Tooltip />
+          <Legend />
           <Line
             type="monotone"
             dataKey="vOfT"
             name="V(Ei, m)(t)"
             stroke="#8fca9e"
-            strokeDasharray="5 5"/>
+            strokeDasharray="5 5"
+          />
           <Line
             type="monotone"
             dataKey="igProfile"
             name="IG Profile"
             stroke="#82ca9a"
-            strokeDasharray="5 5"/>
-          <Line type="monotone" dataKey="voc" name="Resultant VoC" stroke="#8884d8"/>
+            strokeDasharray="5 2"
+          />
+          <Line
+            type="monotone"
+            dataKey="voc"
+            name="Resultant VoC"
+            stroke="#8884d8"
+          />
         </LineChart>
       </Col>
       <Col>
