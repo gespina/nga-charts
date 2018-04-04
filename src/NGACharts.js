@@ -47,7 +47,7 @@ const columns = [
 
 const InfoCard = ({ title, desc, cost1, cost2, max }) => (
   <Card>
-    <CardHeader>{title}</CardHeader>
+    <CardHeader>Overall Summary</CardHeader>
     <CardBody>
       <CardSubtitle>{desc}</CardSubtitle>
       <CardText />
@@ -110,6 +110,12 @@ const ChartCard = ({ sensor, result }) => (
     <CardBody>
       <ResponsiveContainer width="100%" height={300}>
         <ComposedChart width={640} height={200} data={result}>
+          <defs>
+            <linearGradient id="colorVoC" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+          </defs>
           <XAxis
             dataKey="time"
             name="Time"
@@ -141,6 +147,8 @@ const ChartCard = ({ sensor, result }) => (
             dataKey="voc"
             name="Resultant VoC"
             stroke="#8884d8"
+            fillOpacity={1}
+            fill="url(#colorVoC)"
           />
           <Bar
             type="monotone"
@@ -156,10 +164,17 @@ const ChartCard = ({ sensor, result }) => (
   </Card>
 );
 
-const maxVoC = compose(R.reduce(max, 0), map(prop("voc")), prop("result"));
+const maxVoC = compose(
+  R.reduce(max, -Infinity),
+  map(prop("voc")),
+  prop("result")
+);
 
 const ChartsList = ({ id, title, sensor, cost1, cost2, desc, result }) => (
-  <div className="p-3">
+  <Card className="p-3">
+    <CardHeader style={{ backgroundColor: "#333", color: "#fff" }}>
+      {title}
+    </CardHeader>
     <CardDeck>
       <InfoCard
         title={title}
@@ -171,7 +186,7 @@ const ChartsList = ({ id, title, sensor, cost1, cost2, desc, result }) => (
       <TableCard sensor={sensor} result={result} />
       <ChartCard sensor={sensor} result={result} />
     </CardDeck>
-  </div>
+  </Card>
 );
 
 const getScores = prop("results");
