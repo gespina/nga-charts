@@ -1,46 +1,154 @@
 [
-    {
-      "id": "sensor1-case1",
-      "desc": "First case: The sooner we get the evidence the better for the mission.  This may be driven by the desired to get inside the adversary's OODA loop.",
-      "result": [
-        { "time": "2018-04-03T00:01:00Z", "vOfT": 0.6, "igProfile": 0.5, "voc": 0.298 },
-        { "time": "2018-04-03T00:02:00Z", "vOfT": 0.5, "igProfile": 0.5, "voc": 0.248 },
-        { "time": "2018-04-03T00:03:00Z", "vOfT": 0.4, "igProfile": 0.5, "voc": 0.198 },
-        { "time": "2018-04-03T00:04:00Z", "vOfT": 0.3, "igProfile": 0.5, "voc": 0.148 },
-        { "time": "2018-04-03T00:05:00Z", "vOfT": 0.2, "igProfile": 0.5, "voc": 0.098 }
-      ]
-	},
-    {
-      "id": "sensor2-case1",
-      "desc": "First case: The sooner we get the evidence the better for the mission.  This may be driven by the desired to get inside the adversary's OODA loop.",
-      "result": [
-        { "time": "2018-04-03T00:01:00Z", "vOfT": 0.6, "igProfile": 0.3, "voc": 0.16 },
-        { "time": "2018-04-03T00:02:00Z", "vOfT": 0.5, "igProfile": 0.5, "voc": 0.23 },
-        { "time": "2018-04-03T00:03:00Z", "vOfT": 0.4, "igProfile": 0.9, "voc": 0.34 },
-        { "time": "2018-04-03T00:04:00Z", "vOfT": 0.3, "igProfile": 0.5, "voc": 0.13 },
-        { "time": "2018-04-03T00:05:00Z", "vOfT": 0.2, "igProfile": 0.3, "voc": 0.04 }
-      ]
-	},
-    {
-      "id": "sensor1-case2",
-      "desc": "Second case: Evidence is most value in the middle of the collection window.  Related to an event anticipated about that time.",
-      "result": [
-        { "time": "2018-04-03T00:01:00Z", "vOfT": 0.1, "igProfile": 0.5, "voc": 0.048 },
-        { "time": "2018-04-03T00:02:00Z", "vOfT": 0.3, "igProfile": 0.5, "voc": 0.148 },
-        { "time": "2018-04-03T00:03:00Z", "vOfT": 0.5, "igProfile": 0.5, "voc": 0.248 },
-        { "time": "2018-04-03T00:04:00Z", "vOfT": 0.3, "igProfile": 0.5, "voc": 0.148 },
-        { "time": "2018-04-03T00:05:00Z", "vOfT": 0.1, "igProfile": 0.5, "voc": 0.048 }
-      ]
-	},
-    {
-      "id": "sensor2-case2",
-      "desc": "Second case: Evidence is most value in the middle of the collection window.  Related to an event anticipated about that time.",
-      "result": [
-        { "time": "2018-04-03T00:01:00Z", "vOfT": 0.1, "igProfile": 0.3, "voc": 0.01 },
-        { "time": "2018-04-03T00:02:00Z", "vOfT": 0.3, "igProfile": 0.7, "voc": 0.19 },
-        { "time": "2018-04-03T00:03:00Z", "vOfT": 0.5, "igProfile": 0.9, "voc": 0.43 },
-        { "time": "2018-04-03T00:04:00Z", "vOfT": 0.3, "igProfile": 0.7, "voc": 0.19 },
-        { "time": "2018-04-03T00:05:00Z", "vOfT": 0.1, "igProfile": 0.3, "voc": 0.01 }
-      ]
-	}
+  {
+    "id": "sensor1-case1",
+    "title": "Sensor 1 - Case 1",
+    "desc":
+      "First case: The sooner we get the evidence the better for the mission.  This may be driven by the desired to get inside the adversary's OODA loop.",
+    "result": [
+      {
+        "time": "2018-04-03T00:01:00Z",
+        "vOfT": 0.6,
+        "igProfile": 0.5,
+        "voc": 0.298
+      },
+      {
+        "time": "2018-04-03T00:02:00Z",
+        "vOfT": 0.5,
+        "igProfile": 0.5,
+        "voc": 0.248
+      },
+      {
+        "time": "2018-04-03T00:03:00Z",
+        "vOfT": 0.4,
+        "igProfile": 0.5,
+        "voc": 0.198
+      },
+      {
+        "time": "2018-04-03T00:04:00Z",
+        "vOfT": 0.3,
+        "igProfile": 0.5,
+        "voc": 0.148
+      },
+      {
+        "time": "2018-04-03T00:05:00Z",
+        "vOfT": 0.2,
+        "igProfile": 0.5,
+        "voc": 0.098
+      }
+    ]
+  },
+  {
+    "id": "sensor2-case1",
+    "title": "Sensor 2 - Case 1",
+    "desc":
+      "First case: The sooner we get the evidence the better for the mission.  This may be driven by the desired to get inside the adversary's OODA loop.",
+    "result": [
+      {
+        "time": "2018-04-03T00:01:00Z",
+        "vOfT": 0.6,
+        "igProfile": 0.3,
+        "voc": 0.16
+      },
+      {
+        "time": "2018-04-03T00:02:00Z",
+        "vOfT": 0.5,
+        "igProfile": 0.5,
+        "voc": 0.23
+      },
+      {
+        "time": "2018-04-03T00:03:00Z",
+        "vOfT": 0.4,
+        "igProfile": 0.9,
+        "voc": 0.34
+      },
+      {
+        "time": "2018-04-03T00:04:00Z",
+        "vOfT": 0.3,
+        "igProfile": 0.5,
+        "voc": 0.13
+      },
+      {
+        "time": "2018-04-03T00:05:00Z",
+        "vOfT": 0.2,
+        "igProfile": 0.3,
+        "voc": 0.04
+      }
+    ]
+  },
+  {
+    "id": "sensor1-case2",
+    "title": "Sensor 1 - Case 2",
+    "desc":
+      "Second case: Evidence is most value in the middle of the collection window.  Related to an event anticipated about that time.",
+    "result": [
+      {
+        "time": "2018-04-03T00:01:00Z",
+        "vOfT": 0.1,
+        "igProfile": 0.5,
+        "voc": 0.048
+      },
+      {
+        "time": "2018-04-03T00:02:00Z",
+        "vOfT": 0.3,
+        "igProfile": 0.5,
+        "voc": 0.148
+      },
+      {
+        "time": "2018-04-03T00:03:00Z",
+        "vOfT": 0.5,
+        "igProfile": 0.5,
+        "voc": 0.248
+      },
+      {
+        "time": "2018-04-03T00:04:00Z",
+        "vOfT": 0.3,
+        "igProfile": 0.5,
+        "voc": 0.148
+      },
+      {
+        "time": "2018-04-03T00:05:00Z",
+        "vOfT": 0.1,
+        "igProfile": 0.5,
+        "voc": 0.048
+      }
+    ]
+  },
+  {
+    "id": "sensor2-case2",
+    "title": "Sensor 2 - Case 2",
+    "desc":
+      "Second case: Evidence is most value in the middle of the collection window.  Related to an event anticipated about that time.",
+    "result": [
+      {
+        "time": "2018-04-03T00:01:00Z",
+        "vOfT": 0.1,
+        "igProfile": 0.3,
+        "voc": 0.01
+      },
+      {
+        "time": "2018-04-03T00:02:00Z",
+        "vOfT": 0.3,
+        "igProfile": 0.7,
+        "voc": 0.19
+      },
+      {
+        "time": "2018-04-03T00:03:00Z",
+        "vOfT": 0.5,
+        "igProfile": 0.9,
+        "voc": 0.43
+      },
+      {
+        "time": "2018-04-03T00:04:00Z",
+        "vOfT": 0.3,
+        "igProfile": 0.7,
+        "voc": 0.19
+      },
+      {
+        "time": "2018-04-03T00:05:00Z",
+        "vOfT": 0.1,
+        "igProfile": 0.3,
+        "voc": 0.01
+      }
+    ]
+  }
 ]
