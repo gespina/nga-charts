@@ -22,14 +22,14 @@ const ChartsContainer = ({ id, desc, result }) => (
             type="monotone"
             dataKey="vOfT"
             name="V(Ei, m)(t)"
-            stroke="#8fca9e"
+            stroke="#74b5e0"
             strokeDasharray="5 5"
           />
           <Line
             type="monotone"
             dataKey="igProfile"
             name="IG Profile"
-            stroke="#82ca9a"
+            stroke="#6686b7"
             strokeDasharray="5 2"
           />
           <Line
