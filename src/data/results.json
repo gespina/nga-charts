@@ -2,6 +2,9 @@
   {
     "id": "sensor1-case1",
     "title": "Sensor 1 - Case 1",
+    "sensor": "Sensor 1",
+    "cost1": 0.001,
+    "cost2": 0.001,
     "desc":
       "First case: The sooner we get the evidence the better for the mission.  This may be driven by the desired to get inside the adversary's OODA loop.",
     "result": [
@@ -40,6 +43,9 @@
   {
     "id": "sensor2-case1",
     "title": "Sensor 2 - Case 1",
+    "sensor": "Sensor 2",
+    "cost1": 0.01,
+    "cost2": 0.01,
     "desc":
       "First case: The sooner we get the evidence the better for the mission.  This may be driven by the desired to get inside the adversary's OODA loop.",
     "result": [
@@ -78,6 +84,9 @@
   {
     "id": "sensor1-case2",
     "title": "Sensor 1 - Case 2",
+    "sensor": "Sensor 1",
+    "cost1": 0.001,
+    "cost2": 0.001,
     "desc":
       "Second case: Evidence is most value in the middle of the collection window.  Related to an event anticipated about that time.",
     "result": [
@@ -116,6 +125,9 @@
   {
     "id": "sensor2-case2",
     "title": "Sensor 2 - Case 2",
+    "sensor": "Sensor 2",
+    "cost1": 0.01,
+    "cost2": 0.01,
     "desc":
       "Second case: Evidence is most value in the middle of the collection window.  Related to an event anticipated about that time.",
     "result": [
