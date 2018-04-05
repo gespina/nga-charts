@@ -157,6 +157,7 @@ const ChartCard = ({ sensor, result }) => (
             name="Resultant VoC"
             fill="#413ea0"
             legendType="none"
+            label={{ align: "top" }}
           />
         </ComposedChart>
       </ResponsiveContainer>
@@ -170,24 +171,27 @@ const maxVoC = compose(
   prop("result")
 );
 
-const ChartsList = ({ id, title, sensor, cost1, cost2, desc, result }) => (
-  <Card className="p-3">
-    <CardHeader style={{ backgroundColor: "#333", color: "#fff" }}>
-      {title}
-    </CardHeader>
-    <CardDeck>
-      <InfoCard
-        title={title}
-        desc={desc}
-        cost1={cost1}
-        cost2={cost2}
-        max={maxVoC({ result })}
-      />
-      <TableCard sensor={sensor} result={result} />
-      <ChartCard sensor={sensor} result={result} />
-    </CardDeck>
-  </Card>
-);
+const ChartsList = props => {
+  const { title, sensor, cost1, cost2, desc, result } = props;
+  return (
+    <Card className="p-3">
+      <CardHeader style={{ backgroundColor: "#333", color: "#fff" }}>
+        {title}
+      </CardHeader>
+      <CardDeck>
+        <InfoCard
+          title={title}
+          desc={desc}
+          cost1={cost1}
+          cost2={cost2}
+          max={maxVoC({ result })}
+        />
+        <ChartCard sensor={sensor} result={result} />
+        <TableCard sensor={sensor} result={result} />
+      </CardDeck>
+    </Card>
+  );
+};
 
 const getScores = prop("results");
 
